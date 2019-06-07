@@ -64,8 +64,8 @@
         <activity android:name=".Trouble_Verification" />
         <activity android:name=".SigninPasswordActivity" />
         <activity android:name=".UserForgotPassword" />
-        <!--<activity android:name=".ProfileBuilder" />-->
-        <!--<activity android:name=".MapsActivity" />-->
+        <activity android:name=".ProfileBuilder" />
+        <activity android:name=".MapsActivity" />
         <activity android:name=".OnBoarding_1" />
 
         <meta-data

@@ -557,20 +557,7 @@ public class MobileVerification3 extends AppCompatActivity implements View.OnCli
         signInWithPhoneAuthCredential(credential);
     }
 
-    // [START resend_verification]
-//    private void resendVerificationCode(String phoneNumber,
-//                                        PhoneAuthProvider.ForceResendingToken token) {
-//        PhoneAuthProvider.getInstance().verifyPhoneNumber(
-//                phoneNumber,        // Phone number to verify
-//                60,                 // Timeout duration
-//                TimeUnit.SECONDS,   // Unit of timeout
-//                this,               // Activity (for callback binding)
-//                mCallbacks,         // OnVerificationStateChangedCallbacks
-//                token);             // ForceResendingToken from callbacks
-//    }
-    // [END resend_verification]
 
-    // [START sign_in_with_phone]
 
     private void signInWithPhoneAuthCredential(PhoneAuthCredential credential) {
         mAuth.signInWithCredential(credential)
@@ -646,141 +633,18 @@ public class MobileVerification3 extends AppCompatActivity implements View.OnCli
 
                                 // [END_EXCLUDE]
                             }
-                            // [START_EXCLUDE silent]
-                            // Update UI
-                            //   updateUI(STATE_SIGNIN_FAILED);
-                            // [END_EXCLUDE]
+
                         }
                     }
                 });
     }
     // [END sign_in_with_phone]
-//
-//    private void signOut() {
-//        mAuth.signOut();
-//        updateUI(STATE_INITIALIZED);
-//    }
 
-    //  private void updateUI(int uiState) {
-    // updateUI(uiState, mAuth.getCurrentUser(), null);
-    // }
-
-    //  private void updateUI(FirebaseUser user) {
-//        if (user != null) {
-//            updateUI(STATE_SIGNIN_SUCCESS, user);
-//        } else {
-//            updateUI(STATE_INITIALIZED);
-//        }
-    //   }
-
-//    private void updateUI(int uiState, FirebaseUser user) {
-//        //updateUI(uiState, user, null);
-//    }
-//
-//    private void updateUI(int uiState, PhoneAuthCredential cred) {
-//        // updateUI(uiState, null, cred);
-//    }
-
-//    private void updateUI(int uiState, FirebaseUser user, PhoneAuthCredential cred) {
-//
-//        switch (uiState) {
-//            case STATE_INITIALIZED:
-//                // Initialized state, show only the phone number field and start button
-//                enableViews(mStartButton, mPhoneNumberField);
-//                disableViews(mVerifyButton, mResendButton, mVerificationField);
-//                mDetailText.setText(null);
-//                break;
-//            case STATE_CODE_SENT:
-//                // Code sent state, show the verification field, the
-//                enableViews(mVerifyButton, mResendButton, mPhoneNumberField, mVerificationField);
-//                disableViews(mStartButton);
-//                mDetailText.setText(R.string.status_code_sent);
-//                break;
-//            case STATE_VERIFY_FAILED:
-//                // Verification has failed, show all options
-//                enableViews(mStartButton, mVerifyButton, mResendButton, mPhoneNumberField,
-//                        mVerificationField);
-//                mDetailText.setText(R.string.status_verification_failed);
-//                break;
-//            case STATE_VERIFY_SUCCESS:
-    // Verification has succeeded, proceed to firebase sign in
-//                disableViews(mStartButton, mVerifyButton, mResendButton, mPhoneNumberField,
-//                        mVerificationField);
-//                mDetailText.setText(R.string.status_verification_succeeded);
-
-    // Set the verification text based on the credential
-//                if (cred != null) {
-//                    if (cred.getSmsCode() != null) {
-//                        mVerificationField.setText(cred.getSmsCode());
-//                    } else {
-//                        mVerificationField.setText(R.string.instant_validation);
-//                    }
-//                }
-
-    //  / break;
-//            case STATE_SIGNIN_FAILED:
-//                // No-op, handled by sign-in check
-//                mDetailText.setText(R.string.status_sign_in_failed);
-//                break;
-//            case STATE_SIGNIN_SUCCESS:
-//                // Np-op, handled by sign-in check
-//                break;
-    // }
-
-//        if (user == null) {
-//            // Signed out
-//            mPhoneNumberViews.setVisibility(View.VISIBLE);
-//            mSignedInViews.setVisibility(View.GONE);
-//
-//            mStatusText.setText(R.string.signed_out);
-//        } else {
-//            // Signed in
-//            mPhoneNumberViews.setVisibility(View.GONE);
-//            mSignedInViews.setVisibility(View.VISIBLE);
-//
-//            enableViews(mPhoneNumberField, mVerificationField);
-//            mPhoneNumberField.setText(null);
-//            mVerificationField.setText(null);
-//
-//            mStatusText.setText(R.string.signed_in);
-//
-//        }
-    //}
-
-//    private boolean validatePhoneNumber() {
-//        String phoneNumber = mPhoneNumberField.getText().toString();
-//        if (TextUtils.isEmpty(phoneNumber)) {
-//            mPhoneNumberField.setError("Invalid phone number.");
-//
-//            return false;
-//        }
-//
-//        return true;
-//    }
-
-//    private void enableViews(View... views) {
-//        for (View v : views) {
-//            v.setEnabled(true);
-//        }
-//    }
-//
-//    private void disableViews(View... views) {
-//        for (View v : views) {
-//            v.setEnabled(false);
-//        }
-//    }
 
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
 
-//            case R.id.buttonStartVerification:
-//                if (!validatePhoneNumber()) {
-//                    return;
-//                }
-
-            //  startPhoneNumberVerification(mPhoneNumberField.getText().toString());
-            //   break;
 
             case R.id.floatingActionButton_mb_3:
                 String code = veri_code_1.getText().toString() + veri_code_2.getText().toString() + veri_code_3.getText().toString() + veri_code_4.getText().toString() + veri_code_5.getText().toString() + veri_code_6.getText().toString();
