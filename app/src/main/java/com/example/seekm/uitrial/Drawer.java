@@ -46,6 +46,12 @@ public class Drawer extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_drawer);
+
+
+        Intent startServiceIntent = new Intent(Drawer.this, MyService.class);
+        startService(startServiceIntent);
+
+
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -101,7 +107,31 @@ public class Drawer extends AppCompatActivity
             }
         });
 
+//
+//            Profile_preferences = getApplicationContext().getSharedPreferences("Profile_Preferecens",0);
+//
+//            String Email_user= Profile_preferences.getString("Email",null);
+//            String Name_User= Profile_preferences.getString("First_Name",null)+ " " + Profile_preferences.getString("Last_Name",null);
+//
+//            Profile_Email.setText(Email_user);
+//            Profile_Name.setText(Name_User);
+//
+//
+//            Image_Url=Profile_preferences.getString("Profile_Image_Url",null);
+//
+//            Glide.with(Drawer.this)
+//                    .load(Image_Url)
+//                    .into(Profile_Image);
 
+        //Profile_Image.setImageURI();
+
+//        message_req_button = (ImageView) findViewById(R.id.message_requests_button);
+//        message_req_button.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                startActivity(new Intent(Drawer.this, chat_user_main.class));
+//            }
+//        });
     }
 
     @Override

@@ -76,7 +76,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         GoogleApiClient.OnConnectionFailedListener, GoogleMap.OnInfoWindowClickListener, GoogleMap.OnMarkerDragListener {
 
     SharedPreferences Profile_preferences ;
-
     FirebaseAuth mAuth;
     Circle circle;
     DatabaseReference databaseReference;

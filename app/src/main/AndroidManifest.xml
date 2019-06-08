@@ -18,6 +18,11 @@
         android:roundIcon="@drawable/logoblue"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <service
+            android:name=".MyService"
+            android:enabled="true"
+            android:exported="true"></service>
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -63,9 +68,8 @@
         <activity android:name=".NextActivity" />
         <activity android:name=".Trouble_Verification" />
         <activity android:name=".SigninPasswordActivity" />
-        <activity android:name=".UserForgotPassword" />
-        <activity android:name=".ProfileBuilder" />
-        <activity android:name=".MapsActivity" />
+        <activity android:name=".UserForgotPassword" /> <!-- <activity android:name=".ProfileBuilder" /> -->
+        <!-- <activity android:name=".MapsActivity" /> -->
         <activity android:name=".OnBoarding_1" />
 
         <meta-data
@@ -77,7 +81,7 @@
 
         <activity
             android:name=".DocsAttachmentActivity"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
         <activity android:name=".ProfileActivity" />
         <activity android:name=".Drawer" />
     </application>
