@@ -5,9 +5,9 @@
 
         <shape>
             <gradient
-                android:endColor="@color/fui_transparent"
+                android:startColor="@color/fui_transparent"
                 android:centerY="1.8"
-                android:startColor="@color/fui_transparent" />
+                android:endColor="@color/fui_transparent"/>
             <corners android:radius="20dp"/>
         </shape>
     </item>

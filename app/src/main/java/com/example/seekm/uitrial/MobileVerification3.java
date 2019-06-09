@@ -417,7 +417,8 @@ public class MobileVerification3 extends AppCompatActivity implements View.OnCli
                     wrong_code_notifier.setText("Invalid phone number.");
 
                     // [END_EXCLUDE]
-                } else if (e instanceof FirebaseTooManyRequestsException) {
+                }
+                else if (e instanceof FirebaseTooManyRequestsException) {
                     // The SMS quota for the project has been exceeded
                     // [START_EXCLUDE]
 

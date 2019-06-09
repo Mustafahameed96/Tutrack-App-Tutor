@@ -49,5 +49,25 @@ dependencies {
     //glide
     implementation 'com.github.bumptech.glide:glide:4.3.1'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.3.1'
+
+
+
+
+
+
+
+
+    //---IMAGE CROPPING LIBRARY
+    implementation 'com.theartofdev.edmodo:android-image-cropper:2.5.0'
+
+
+    //-----FOR SENDING AND GETTING NOTIFICATION-----
+    implementation 'com.squareup.okhttp:okhttp:2.7.5'
+
+
+    //----COMPRESSING THE IMAGE----
+    implementation 'id.zelory:compressor:2.1.0'
+    //----GETTING IMAGE FROM URL AND ADDING TO HOLDER----
+    implementation 'com.squareup.picasso:picasso:2.5.2'
 }
 apply plugin: 'com.google.gms.google-services'

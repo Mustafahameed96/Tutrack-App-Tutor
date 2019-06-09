@@ -39,6 +39,7 @@ public class Drawer extends AppCompatActivity
     public String Last_Name;
     public String Email_Address;
     public String Image_Url1;
+    public ImageView req_btn;
     SharedPreferences Profile_preferences;
     FirebaseFirestore db = FirebaseFirestore.getInstance();
 
@@ -47,9 +48,8 @@ public class Drawer extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_drawer);
 
+    req_btn= findViewById(R.id.requestsbtn);
 
-        Intent startServiceIntent = new Intent(Drawer.this, MyService.class);
-        startService(startServiceIntent);
 
 
         Toolbar toolbar = findViewById(R.id.toolbar);
@@ -132,6 +132,14 @@ public class Drawer extends AppCompatActivity
 //                startActivity(new Intent(Drawer.this, chat_user_main.class));
 //            }
 //        });
+
+        req_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Drawer.this,RequestsActivity.class);
+                startActivityForResult(i,1);
+            }
+        });
     }
 
     @Override
@@ -194,5 +202,7 @@ public class Drawer extends AppCompatActivity
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+
+
     }
 }
