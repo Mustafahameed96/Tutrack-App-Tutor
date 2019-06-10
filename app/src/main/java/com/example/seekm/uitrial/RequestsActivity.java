@@ -139,7 +139,6 @@ public class RequestsActivity extends AppCompatActivity {
                 String user_doc_id =  StudentId.get(position);
                 Toast.makeText(RequestsActivity.this,user_doc_id,Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(RequestsActivity.this, StudentsProfile.class);
-
                 intent.putExtra("doc_id", user_doc_id);
                 startActivity(intent);
             }
