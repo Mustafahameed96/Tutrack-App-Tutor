@@ -21,11 +21,12 @@ import java.util.List;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
+
 public class RequestAdapter extends RecyclerView.Adapter<RequestAdapter.RequestViewHolder> {
 
     private List<String> requestList;
     private FirebaseAuth mAuth;
-    DatabaseReference mDatabaseReference ;
+   public DatabaseReference mDatabaseReference ;
 
     private Context ctx;
 

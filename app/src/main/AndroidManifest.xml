@@ -18,7 +18,8 @@
         android:roundIcon="@drawable/logoblue"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".RequestsActivity"></activity>
+        <activity android:name=".StudentsProfile"></activity>
+        <activity android:name=".RequestsActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -65,8 +66,8 @@
         <activity android:name=".Trouble_Verification" />
         <activity android:name=".SigninPasswordActivity" />
         <activity android:name=".UserForgotPassword" />
-         <activity android:name=".ProfileBuilder" />
-         <activity android:name=".MapsActivity" />
+        <activity android:name=".ProfileBuilder" />
+        <activity android:name=".MapsActivity" />
         <activity android:name=".OnBoarding_1" />
 
         <meta-data
