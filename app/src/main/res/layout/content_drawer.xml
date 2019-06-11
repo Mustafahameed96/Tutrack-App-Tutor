@@ -23,9 +23,10 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/messages"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.060000002" />
+        app:layout_constraintVertical_bias="0.108" />
 
     <TextView
+        android:id="@+id/textView22"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Ad Placement"
@@ -35,6 +36,7 @@
         app:layout_constraintStart_toStartOf="@+id/advert" />
 
     <TextView
+        android:id="@+id/textView21"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/montserrat"
@@ -62,15 +64,14 @@
         android:layout_height="19dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="168dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:fontFamily="@font/montserrat"
         android:text="Requests"
         android:textColor="@color/colorAccent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.981"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/requestsbtn"
+        app:layout_constraintStart_toStartOf="@+id/textView"
         app:layout_constraintTop_toBottomOf="@+id/requestsbtn"
         app:layout_constraintVertical_bias="0.005" />
 
@@ -94,50 +95,42 @@
         android:layout_width="142dp"
         android:layout_height="85dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="336dp"
-        android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:src="@drawable/envelope"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.478"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/advert"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <TextView
-        android:id="@+id/textView16"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/montserrat"
-        android:text="Nearby Tutors"
-        android:textColor="@color/colorAccent"
-        app:layout_constraintEnd_toEndOf="@+id/nearbyTutors"
-        app:layout_constraintStart_toStartOf="@+id/nearbyTutors"
-        app:layout_constraintTop_toBottomOf="@+id/nearbyTutors" />
-
-    <ImageView
-        android:id="@+id/nearbyTutors"
-        android:layout_width="100dp"
-        android:layout_height="85dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        android:src="@drawable/ic_group_24px"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:src="@drawable/request_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/history"
         app:layout_constraintEnd_toEndOf="@+id/messages"
+        app:layout_constraintHorizontal_bias="0.26"
         app:layout_constraintStart_toStartOf="@+id/messages"
-        app:layout_constraintTop_toBottomOf="@+id/messages"
-        app:layout_constraintVertical_bias="0.18" />
+        app:layout_constraintTop_toTopOf="@+id/history"
+        app:layout_constraintVertical_bias="1.0" />
 
     <ImageView
         android:id="@+id/history"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="8dp"
         android:src="@drawable/history"
-        app:layout_constraintBottom_toBottomOf="@+id/nearbyTutors"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/nearbyTutors"
-        app:layout_constraintTop_toTopOf="@+id/nearbyTutors" />
+        app:layout_constraintHorizontal_bias="0.3"
+        app:layout_constraintStart_toEndOf="@+id/requestsbtn"
+        app:layout_constraintTop_toBottomOf="@+id/advert"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/imageView23"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/requestsbtn"
+        app:layout_constraintEnd_toEndOf="@+id/requestsbtn"
+        app:layout_constraintHorizontal_bias="0.88"
+        app:layout_constraintStart_toStartOf="@+id/requestsbtn"
+        app:layout_constraintTop_toTopOf="@+id/requestsbtn"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/red_notification" />
 
 </android.support.constraint.ConstraintLayout>

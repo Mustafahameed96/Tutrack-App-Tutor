@@ -11,16 +11,12 @@
             android:title="Edit profile" />
         <item
             android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_help"
+            android:icon="@drawable/ic_about"
             android:title="Help" />
         <item
             android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_about"
-            android:title="About" />
-        <item
-            android:id="@+id/nav_manage"
-            android:icon="@drawable/ic_settings"
-            android:title="Settings" />
+            android:icon="@drawable/ic_help"
+            android:title="Feedback" />
         <item
             android:id="@+id/nav_share"
             android:icon="@drawable/ic_share"

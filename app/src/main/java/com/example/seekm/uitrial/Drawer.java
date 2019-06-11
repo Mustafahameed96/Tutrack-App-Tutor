@@ -182,21 +182,26 @@ public class Drawer extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_camera) {
+            startActivity(new Intent (Drawer.this,EditProfile.class));
             // Handle the camera action
         } else if (id == R.id.nav_gallery) {
+            startActivity(new Intent(Drawer.this,About.class));
+
 
         } else if (id == R.id.nav_slideshow) {
-
-        } else if (id == R.id.nav_manage) {
-
+            startActivity(new Intent(Drawer.this, Feedback.class));
         } else if (id == R.id.nav_share) {
+            startActivity(new Intent(Drawer.this, Share.class));
+
 
         } else if (id == R.id.nav_logout) {
+
 
             FirebaseAuth.getInstance().signOut();
 
 //            ((ActivityManager)getSystemService(ACTIVITY_SERVICE)).clearApplicationUserData();
-            startActivity(new Intent(Drawer.this, MobileV.class));
+            startActivity(new Intent(Drawer.this,MobileV.class));
+
         }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
