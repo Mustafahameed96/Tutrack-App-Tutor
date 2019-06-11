@@ -34,6 +34,10 @@
 
         <activity android:name=".Verifier" />
         <activity android:name=".Social" />
+        <activity android:name=".About"/>
+        <activity android:name=".EditProfile"/>
+        <activity android:name=".Feedback"/>
+        <activity android:name=".Share"/>
 
         <meta-data xmlns:tools="http://schemas.android.com/tools"
             android:name="com.facebook.sdk.ApplicationId"
