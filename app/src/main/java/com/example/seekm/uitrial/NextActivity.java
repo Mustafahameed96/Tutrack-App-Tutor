@@ -10,6 +10,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
+import android.text.InputType;
 import android.text.TextWatcher;
 import android.util.Patterns;
 import android.view.View;
@@ -81,7 +82,11 @@ public class NextActivity extends AppCompatActivity implements View.OnClickListe
         Confirm_password = findViewById(R.id.edit_text_confirm_pwd);
 
         DateOfBirth = findViewById(R.id.edit_text_date);
+        DateOfBirth.setInputType(InputType.TYPE_NULL);
         DateOfBirth.setLongClickable(false);
+        DateOfBirth.setCursorVisible(false);
+        DateOfBirth.setFocusableInTouchMode(false);
+        DateOfBirth.setFocusable(false);
 
         radioGroup_gender = findViewById(R.id.radio_group_gender);
 
