@@ -1,3 +1,4 @@
+
 package com.example.seekm.uitrial;
 
 import android.content.Intent;
@@ -85,21 +86,21 @@ public class RequestsActivity extends AppCompatActivity {
                                 if (task.isSuccessful()) {
                                     DocumentSnapshot document = task.getResult();
 
-                                        try {
+                                    try {
 
-                                            First_Name = document.get("FirstName").toString();
-                                            Last_Name = document.get("LastName").toString();
-                                            StudentId.add(document.getId());
-                                            arrayList.add(First_Name + " " + Last_Name);
+                                        First_Name = document.get("FirstName").toString();
+                                        Last_Name = document.get("LastName").toString();
+                                        StudentId.add(document.getId());
+                                        arrayList.add(First_Name + " " + Last_Name);
 
-                                            arrayAdapter = new ArrayAdapter<String>(RequestsActivity.this, android.R.layout.simple_list_item_1, arrayList);
-                                            listView.setAdapter(arrayAdapter);
+                                        arrayAdapter = new ArrayAdapter<String>(RequestsActivity.this, android.R.layout.simple_list_item_1, arrayList);
+                                        listView.setAdapter(arrayAdapter);
 
 
 
-                                        } catch (NullPointerException e) {
+                                    } catch (NullPointerException e) {
 
-                                        }
+                                    }
 
 
                                 } else {
