@@ -15,6 +15,24 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
+import android.content.pm.ActivityInfo;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
+import android.os.Build;
+import android.os.Bundle;
+import android.os.Handler;
+import android.support.design.widget.Snackbar;
+import android.support.v4.content.LocalBroadcastManager;
+import android.util.Log;
+import com.example.seekm.uitrial.MobileVerification3;
+//import static com.example.seekm.uitrial.NetworkChangeReceiver.IS_NETWORK_AVAILABLE;
+
+
+
 
 public class MobileVerification2 extends AppCompatActivity implements View.OnClickListener {
     public EditText phone_number;
@@ -24,6 +42,7 @@ public class MobileVerification2 extends AppCompatActivity implements View.OnCli
     public TextView forgot_btn_mob_2;
     public TextView no_account_btn_2;
     public ProgressBar progressBar_2;
+    public boolean internetCheck = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +66,7 @@ public class MobileVerification2 extends AppCompatActivity implements View.OnCli
         backbutton = findViewById(R.id.back_button_mob_2);
         backbutton.setOnClickListener(this);
         forgot_btn_mob_2 = findViewById(R.id.forgot_btn_mb_5);
+       forgot_btn_mob_2.setVisibility(View.INVISIBLE);
         forgot_btn_mob_2.setOnClickListener(this);
         no_account_btn_2 = findViewById(R.id.no_account_btn_2);
         no_account_btn_2.setOnClickListener(this);

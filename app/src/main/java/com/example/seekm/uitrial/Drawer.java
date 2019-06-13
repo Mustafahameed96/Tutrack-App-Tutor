@@ -39,7 +39,7 @@ public class Drawer extends AppCompatActivity
     public String Last_Name;
     public String Email_Address;
     public String Image_Url1;
-    public ImageView req_btn;
+    public ImageView req_btn , noti_btn;
     SharedPreferences Profile_preferences;
     FirebaseFirestore db = FirebaseFirestore.getInstance();
 
@@ -49,6 +49,7 @@ public class Drawer extends AppCompatActivity
         setContentView(R.layout.activity_drawer);
 
     req_btn= findViewById(R.id.requestsbtn);
+    noti_btn = findViewById(R.id.notification_Button);
 
 
 
@@ -196,6 +197,7 @@ public class Drawer extends AppCompatActivity
 
         } else if (id == R.id.nav_logout) {
 
+            finishAffinity();
 
             FirebaseAuth.getInstance().signOut();
 

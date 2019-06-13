@@ -58,6 +58,19 @@
     <style name="FullyTranslucent" parent="android:Theme.Translucent.NoTitleBar">
         <item name="android:progressBarStyle">@style/InvisibleProgress</item>
     </style>
+    <style name="Dialog.Theme" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="DialogTheme" parent="Theme.AppCompat.Light">
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name = "Progress" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
 
     <style name="InvisibleProgress">
 

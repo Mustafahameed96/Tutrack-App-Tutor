@@ -620,7 +620,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public void onMarkerDragEnd(Marker marker) {
         LatLng position = marker.getPosition();
         latitude = position.latitude;
-        longitude = position.latitude;
+        longitude = position.longitude;
         Log.d(getClass().getSimpleName(), String.format("Dragged to %f:%f",
                 position.latitude,
                 position.longitude));
